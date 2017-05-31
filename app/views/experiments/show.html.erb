@@ -13,10 +13,10 @@
 <%end%>
 
 <% if @experiment.conclusion %>
-<h2>Conclusion</h2>
-<p>
-  <%= @experiment.conclusion %>
-</p>
+  <h2>Conclusion</h2>
+  <p>
+    <%= @experiment.conclusion %>
+  </p>
 <%end%>
 
 <%=link_to "Edit", edit_experiment_path(@experiment)%>
