@@ -1,11 +1,12 @@
 class ExperimentsController < ApplicationController
 
-  before_action :set_experiment
+  before_action :set_experiment, except: [:create, :new]
 
   def show
   end
 
   def new
+    @experiment = Experiment.new
   end
 
   def edit
