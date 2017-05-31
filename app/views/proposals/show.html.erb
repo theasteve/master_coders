@@ -1,8 +1,8 @@
-<h1> @proposal.title </h1>
+<h1> <%= @proposal.title %> </h1>
 
 <ul>
   <li>
-    Request made by: <%= @proposal.requestor %>
+    Request made by: <%= @proposal.requestor.username %>
   </li>
   <li>
     Summary: <%= @proposal.summary %>
@@ -15,7 +15,7 @@
   </li>
 
   <!-- create helper method? for below -->
-  <% if !@proposal.open %>
+  <% if !@proposal.status == "open" %>
   <li>
     Experimentor: <%= @experimentor.username %>
   </li>
