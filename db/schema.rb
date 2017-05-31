@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20170531194102) do
     t.integer  "experimentor_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["experimentor_id"], name: "index_proposals_on_experimentor_id", using: :btree
     t.index ["requestor_id"], name: "index_proposals_on_requestor_id", using: :btree
   end
 
