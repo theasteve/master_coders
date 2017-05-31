@@ -6,7 +6,7 @@
 * Richard Kim @richardykim
 * Louis Gaeta @louisgaeta1
 
-## User Stories
+## MVP User Stories
 * User logs in and out of app
 * User creates an account
 * User creates a proposal
@@ -17,9 +17,6 @@
 * User creates an observation
 * User is able to see procedure information
 
-## MVP
-All the project requirements would be met except comments.
-
 ## Ruby version
 * ```Rails 5.0.3```
 * ```ruby 2.3.4p301```
@@ -28,10 +25,10 @@ All the project requirements would be met except comments.
 *  ```bundle install```
 
 ## Database initialization
-*```bundle exec rake db:create```
-*```bundle exec rake db:migrate```
-*```bundle exec rake db:seed```
+* ```bundle exec rake db:create```
+* ```bundle exec rake db:migrate```
+* ```bundle exec rake db:seed```
 
 ## How to run the test suite
- ```rails generate rspec:install```
+* ```rails generate rspec:install```
 
