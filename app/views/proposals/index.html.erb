@@ -2,8 +2,8 @@
 
 <ul>
 <% @proposals.each do |proposal| %>
-  <li> link_to proposal.title, proposal</li>
+  <li> <%= link_to  proposal.title, proposal %></li>
 <% end %>
 </ul>
 
-<%= link_to 'Create new proposal', new_proposal_path %> 
+<%= link_to 'Create new proposal', new_proposal_path %>

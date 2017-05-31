@@ -4,7 +4,7 @@ class ProposalsController < ApplicationController
     end
 
     def show
-      @proposal = Proposal.find(proposal_params)
+      @proposal = Proposal.find(params[:id])
     end
 
     def new
