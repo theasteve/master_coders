@@ -15,7 +15,10 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.find_by(username: params[:username])
+    @user = User.new
+  end
+  def logginging
+
   end
 
   def logout
