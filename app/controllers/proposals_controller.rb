@@ -5,6 +5,7 @@ class ProposalsController < ApplicationController
 
     def show
       # @proposal = Proposal.find(proposal_params)
+      # @experiment = Experiment.find_by(proposal_id: @proposal.id)
     end
 
     def new
