@@ -28,6 +28,6 @@ class ExperimentsController < ApplicationController
   end
 
   def experiment_params
-    params.require(:experiment).permit(:name, :description, :results, :conclusions)
+    params.require(:experiment).permit(:name, :description, :results, :conclusion)
   end
 end

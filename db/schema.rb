@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20170531184102) do
     t.string   "name",        null: false
     t.text     "description", null: false
     t.text     "results"
-    t.text     "conclusions"
+    t.text     "conclusion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

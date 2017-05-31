@@ -4,7 +4,7 @@ class CreateExperiments < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.text :description, null: false
       t.text :results
-      t.text :conclusions
+      t.text :conclusion
       # t.references :proposal, foreign_key: true
 
       t.timestamps(null: false)
