@@ -21,14 +21,14 @@
 All the project requirements would be met except comments.
 
 ## Ruby version
- ```Rails 5.0.3```
- ```ruby 2.3.4p301```
+* ```Rails 5.0.3```
+* ```ruby 2.3.4p301```
  
 * System dependencies
 
-* Configuration
-  ```bundle install```
-  ```rails generate rspec:install```
+## Configuration
+*  ```bundle install```
+*  ```rails generate rspec:install```
   
 * Database creation
 
