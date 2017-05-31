@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  # resources :propsals, except: :delete do
+  root "proposals#index"
+  
+  resources :proposals, except: :delete do
     resources :experiments, except: [:delete, :index]
-  # end
+  end
+
+  resources :users, only: [:new, :create]
+
 end

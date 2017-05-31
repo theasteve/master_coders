@@ -1,0 +1,22 @@
+<%= form_for([@proposal]) do |f|%>
+  <% if @proposal.errors.any? %>
+  <h4>
+    <%= pluralize(@proposal.errors.count, "error") %>
+    prohibited this proposal from being saved:
+  </h4>
+  <ul>
+    <% @proposal.errors.full_messages.each do |msg| %>
+    <li> <%= msg %></li>
+    <% end %>
+  </ul>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %> <br>
+    <%= f.label :summary %>
+    <%= f.text_area :summary %> <br>
+    <%= f.label :hypothesis %>
+    <%= f.text_area :hypothesis%> <br>
+  </p>
+
+<% end %>
