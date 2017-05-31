@@ -16,6 +16,9 @@ class ExperimentsController < ApplicationController
   end
 
   def update
+    if @experiment.update(experiment_params)
+      redirect_to @experiment
+    end
   end
 
   private
@@ -25,6 +28,6 @@ class ExperimentsController < ApplicationController
   end
 
   def experiment_params
-    params.require(:experiment).permit(:name, :description, :results, :conclusion)
+    params.require(:experiment).permit(:name, :description, :results, :conclusions)
   end
 end
