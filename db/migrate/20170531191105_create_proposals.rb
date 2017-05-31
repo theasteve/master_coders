@@ -1,13 +1,14 @@
 class CreateProposals < ActiveRecord::Migration[5.0]
   def change
     create_table :proposals do |t|
+      t.string :title 
       t.text :summary
       t.string :hypothesis
       t.string :status
       t.references :requestor
       t.references :experimentor
 
-      t.timestamps 
+      t.timestamps
     end
   end
 end
