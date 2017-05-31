@@ -1,0 +1,28 @@
+<h1> @proposal.title </h1>
+
+<ul>
+  <li>
+    Request made by: <%= @proposal.requestor %>
+  </li>
+  <li>
+    Summary: <%= @proposal.summary %>
+  </li>
+  <li>
+    Hypothesis: <%= @proposal.hypothesis %>
+  </li>
+  <li>
+    Status: <%= @proposal.status %>
+  </li>
+
+  <!-- create helper method? for below -->
+  <% if !@proposal.open %>
+  <li>
+    Experimentor: <%= @experimentor.username %>
+  </li>
+  <% end %>
+
+  <li>
+    <!-- link_to experiment, i need pathname once its nested -->
+  </li>
+
+</ul>
