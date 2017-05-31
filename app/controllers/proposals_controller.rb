@@ -1,15 +1,14 @@
 class ProposalsController < ApplicationController
   def index
-      # @proposals = Proposal.all
+      @proposals = Proposal.all
     end
 
     def show
-      # @proposal = Proposal.find(proposal_params)
-      # @experiment = Experiment.find_by(proposal_id: @proposal.id)
+      @proposal = Proposal.find(proposal_params)
     end
 
     def new
-      # @proposal = Proposal.new
+      @proposal = Proposal.new
     end
 
     def create
