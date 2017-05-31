@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 20170531194102) do
   end
 
   create_table "proposals", force: :cascade do |t|
-    t.string   "title",           null: false
-    t.text     "summary",         null: false
-    t.string   "hypothesis",      null: false
-    t.string   "status",          null: false
+    t.string   "title"
+    t.text     "summary"
+    t.string   "hypothesis"
+    t.string   "status"
     t.integer  "requestor_id"
     t.integer  "experimentor_id"
     t.datetime "created_at",      null: false

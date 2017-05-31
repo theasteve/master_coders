@@ -6,7 +6,7 @@ class CreateProposals < ActiveRecord::Migration[5.0]
       t.string :hypothesis, null: false
       t.string :status, null: false
       t.references :requestor
-      t.references :experimentor
+      t.integer :experimentor_id, foreign_key: true  
 
       t.timestamps
     end
