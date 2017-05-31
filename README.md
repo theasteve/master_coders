@@ -31,4 +31,4 @@
 
 ## How to run the test suite
 * ```rails generate rspec:install```
-
+* ```bundle exec rspec```
