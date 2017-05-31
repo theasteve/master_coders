@@ -1,0 +1,22 @@
+<h1> <%= @experiment.name %> </h1>
+
+<h2>Description</h2>
+<p>
+  <%= @experiment.description %>
+</p>
+
+<% if @experiment.results %>
+<h2>Results</h2>
+<p>
+  <%= @experiment.results %>
+</p>
+<%end%>
+
+<% if @experiment.conclusion %>
+  <h2>Conclusion</h2>
+  <p>
+    <%= @experiment.conclusion %>
+  </p>
+<%end%>
+
+<%=link_to "Edit", edit_experiment_path(@experiment)%>
