@@ -27,15 +27,14 @@ ActiveRecord::Schema.define(version: 20170531194102) do
   end
 
   create_table "proposals", force: :cascade do |t|
-    t.string   "title"
-    t.text     "summary"
-    t.string   "hypothesis"
-    t.string   "status"
+    t.string   "title",           null: false
+    t.text     "summary",         null: false
+    t.string   "hypothesis",      null: false
+    t.string   "status",          null: false
     t.integer  "requestor_id"
     t.integer  "experimentor_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["experimentor_id"], name: "index_proposals_on_experimentor_id", using: :btree
     t.index ["requestor_id"], name: "index_proposals_on_requestor_id", using: :btree
   end
 
