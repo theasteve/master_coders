@@ -14,15 +14,18 @@
     Status: <%= @proposal.status %>
   </li>
 
-  <!-- create helper method? for below -->
+
   <% if !@proposal.status == "open" %>
   <li>
     Experimentor: <%= @experimentor.username %>
   </li>
-  <% end %>
-
   <li>
-    <!-- link_to experiment, i need pathname once its nested -->
+    <% = link_to @proposal.experiment.name,  %>
   </li>
+  <% elsif !@proposal.status == "open" && current_user.role == "staff"  %>
+  <li>
+    <% = link_to "Create experiment", new_proposal_experiment_path(@proposal) %>
+  </li>
+  <% end %>
 
 </ul>
