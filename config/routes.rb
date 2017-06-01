@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :proposals, except: :delete do
     resources :experiments, except: [:delete, :index] do
+    end
   end
 
   resources :users, only: [:new, :create]
