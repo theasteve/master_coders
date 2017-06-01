@@ -35,6 +35,7 @@ class ExperimentsController < ApplicationController
   def update
     if experimentor?(@proposal)
       if @experiment.update(experiment_params)
+        @proposal.update_attributes(status: "closed") if @experiment.results != "" || @experiment.conclusion != ""
         redirect_to proposal_experiment_path(@experiment.proposal, @experiment)
       end
     else
