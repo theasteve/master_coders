@@ -7,5 +7,7 @@
 </ul>
 
 <% if logged_in? && current_user.role == "Faculty" %>
-<%= link_to 'Create new proposal', new_proposal_path %>
+	<div class="proposal-link">
+		<%= link_to 'Create new proposal', new_proposal_path %>
+	</div>
 <% end %>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>CookiesAndCream</title>
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Open+Sans" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,13 +10,24 @@
   </head>
 
   <body>
-    <%= link_to "Home", proposals_path%>
-    <% if logged_in? %>
-      <%= link_to "Log out!", users_logout_path%>
-    <%else%>
-      <%= link_to "Register!", new_user_path%>
-      <%= link_to "Log in!", users_login_path%>
-    <%end%>
-    <%= yield %>
+    <div class="container">
+      <div id="header">
+        <div class="header-logo">
+          <a href="/"><h1>Cookies&amp;Cream</h1></a>
+        </div>
+        <div class="header-nav">
+          <%= link_to "Home", proposals_path%>
+          <span>•</span>
+          <% if logged_in? %>
+            <%= link_to "Log out!", users_logout_path%>
+          <%else%>
+            <%= link_to "Register!", new_user_path%>
+            <span>•</span>
+            <%= link_to "Log in!", users_login_path%>
+          <%end%>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

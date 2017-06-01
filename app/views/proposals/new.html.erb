@@ -1,15 +1,18 @@
-<h1> New Proposal</h1>
-<%= render :partial => './errors' %>
+<div class="form-section">
+  <div class="form-wrapper">
+    <h2>Create A New Proposal</h2>
+    <%= form_for([@proposal]) do |f|%>
+      <%= render :partial => './errors' %>
 
-<%= form_for([@proposal]) do |f|%>
-
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %> <br>
-    <%= f.label :summary %>
-    <%= f.text_area :summary %> <br>
-    <%= f.label :hypothesis %>
-    <%= f.text_area :hypothesis%> <br>
-  </p>
-  <%= f.submit "Create New Proposal" %>
-<% end %>
+      <p>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-textfield' %> <br>
+        <%= f.label :summary %>
+        <%= f.text_area :summary, class: 'form-textfield' %> <br>
+        <%= f.label :hypothesis %>
+        <%= f.text_area :hypothesis, class: 'form-textfield'%> <br>
+      </p>
+      <%= f.submit "Create New Proposal", class: 'submit-button' %>
+    <% end %>
+  </div>
+</div>

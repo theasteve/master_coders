@@ -1,15 +1,103 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+h1, h2, h3, h4 {
+	font-family: 'Bubbler One', sans-serif;
+}
+
+p, a, label, input, ol, ul, li {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: rgb(123,195,242);
+	text-decoration: none;
+}
+
+.container {
+	margin: 50px 100px;
+	max-width: 1400px;
+}
+
+#header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-logo h1 {
+	font-size: 40px;
+}
+
+.header-nav a {
+	font-size: 20px;
+}
+
+.header-nav span {
+	margin: 0 10px;
+}
+
+.form-section {
+	display: flex;
+	justify-content: center;
+}
+
+.form-wrapper {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 30px;
+	width: 40%
+}
+
+.form-wrapper h2 {
+	font-size: 35px;
+	text-align: center;
+	margin: 0;
+}
+
+form {
+	display: table;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.form-fields {
+	margin: 5px 0 15px 0;
+	width: 100%;
+}
+
+.form-textfield {
+	display: block;
+	width: 200px;
+}
+
+.form-wrapper select {
+	width: 200px;
+}
+
+.submit-button {
+	background-color: #fff;
+	border-radius: 5px;
+	border: 2px rgb(123,195,242) solid;
+	color: rgb(123,195,242);
+	display: table;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	margin: 0 auto;
+	padding: 15px;
+	transition: background-color 0.5s ease;
+	width: 200px
+}
+
+.submit-button:hover {
+	background-color: rgb(123,195,242);
+	border: 2px #fff solid;
+	color: #fff;
+	transition: background-color 0.5s ease;
+}
+
+.errors {
+	color: red;
+}
+
+.proposal-link {
+	margin-top: 50px;
+}
+
