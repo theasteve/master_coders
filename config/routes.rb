@@ -7,7 +7,14 @@ Rails.application.routes.draw do
     resources :experiments, except: [:delete, :index] do
     end
       resources :observations, only: [:new, :create, :show]
-      resources :procedures, only: [:show, :new, :create]
+      resources :procedures, only: [:show, :new, :create] do
+        resources :observations, only: [:new, :create, :show]
+      end
+
+    end
+
+
+
   end
 
   resources :users, only: [:new, :create]

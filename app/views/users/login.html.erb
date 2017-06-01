@@ -1,7 +1,7 @@
 <div class="form-section">
   <div class="form-wrapper">
     <h2>Login Form</h2>
-    <%= render 'errors' %>
+    <%= render :partial => './errors' %>
     <%= form_for @user, url: '/users/login'  do |f| %>
     <p>
       <%= f.label :username  %> </br>

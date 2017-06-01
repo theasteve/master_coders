@@ -2,17 +2,7 @@
   <div class="form-wrapper">
     <h2>Create A New Proposal</h2>
     <%= form_for([@proposal]) do |f|%>
-      <% if @proposal.errors.any? %>
-      <h4>
-        <%= pluralize(@proposal.errors.count, "error") %>
-        prohibited this proposal from being saved:
-      </h4>
-      <ul>
-        <% @proposal.errors.full_messages.each do |msg| %>
-        <li> <%= msg %></li>
-        <% end %>
-      </ul>
-    <%end %>  
+      <%= render :partial => './errors' %>
 
       <p>
         <%= f.label :title %>
@@ -22,7 +12,7 @@
         <%= f.label :hypothesis %>
         <%= f.text_area :hypothesis, class: 'form-textfield'%> <br>
       </p>
-      <%= f.submit "Create New Proposal", class: 'submit-button' %> 
+      <%= f.submit "Create New Proposal", class: 'submit-button' %>
     <% end %>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="form-section">
   <div class="form-wrapper">
     <h2>Registration Form</h2>
-    <%= render 'errors' %>
+    <%= render :partial => './errors' %>
     <%= form_for @user do |f| %>
     <p>
       <%= f.label :username  %> </br>

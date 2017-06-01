@@ -1,6 +1,6 @@
 <h1>Create an Observation</h1>
 
-<%= form_for [@experiment, @observation] do |f| %>
+<%= form_for @form_params do |f| %>
 <p>
   <%= f.label :body %>
   <%= f.text_field :body %>

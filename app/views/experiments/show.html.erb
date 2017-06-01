@@ -37,3 +37,15 @@
 <% end %>
 
 <%= link_to "Add Procedure", new_proposal_experiment_procedure_path(@experiment.proposal, @experiment)  %>
+
+<%= link_to 'Create Observation', new_proposal_experiment_observation_path(@experiment.proposal, @experiment) %>
+
+<% if @experiment.observations.any? %>
+  <p>Observations </p>
+  <ul>
+  <% @experiment.observations.each do |observation| %>
+
+    <li><%= observation.body %></li>
+    <% end %>
+</ul>
+<% end %>
