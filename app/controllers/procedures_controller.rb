@@ -1,8 +1,8 @@
 class ProceduresController < ApplicationController
-  def index
-  end
-
   def show
+    @proposal = Proposal.find(params[:proposal_id])
+    @experiment = Experiment.find(params[:experiment_id])
+    @procedure = Procedure.find(params[:id])
   end
 
   def new
