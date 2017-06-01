@@ -21,8 +21,14 @@
   </li>
   <% end %>
 
+  <% if @proposal.experiment %>
   <li>
-    <!-- link_to experiment, i need pathname once its nested -->
+    <%= link_to "Experiment", proposal_experiment_path(@proposal, @proposal.experiment) %>
   </li>
+  <% else %>
+  <li>
+    <%= link_to "Create Experiment", new_proposal_experiment_path(@proposal) %>
+    </li>
+  <% end %>
 
 </ul>
