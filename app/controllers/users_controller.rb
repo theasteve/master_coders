@@ -17,8 +17,17 @@ class UsersController < ApplicationController
   def login
     @user = User.new
   end
-  def logginging
 
+  def loggingin
+    @user = User.find_by(username: params[:user][:username])
+    # binding.pry
+    if @user && @user.authenticate(params[:user][:password])
+      session[:user_id]= @user.id
+      redirect_to '/'
+    else
+      @errors = @user.errors.full_messages
+      redirect_to '/users/login'
+    end
   end
 
   def logout
@@ -28,7 +37,8 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:username, :password, :type)
+      params[:user][:role] = params[:role]
+      params.require(:user).permit(:username, :password, :role)
     end
 
 end
