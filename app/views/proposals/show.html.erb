@@ -20,11 +20,11 @@
     Experimentor: <%= @experimentor.username %>
   </li>
   <li>
-    <% = link_to @proposal.experiment.name  %>
+    <%= link_to @proposal.experiment.name  %>
   </li>
   <% elsif !@proposal.status == "open" && current_user.role == "staff"  %>
   <li>
-    <% = link_to "Create experiment", new_proposal_experiment_path(@proposal) %>
+    <%= link_to "Create experiment", new_proposal_experiment_path(@proposal) %>
   </li>
   <% end %>
 
