@@ -1,17 +1,19 @@
-<h1>Login Form</h1>
-
-<%= render 'errors' %>
-
-<%= form_for @user, url: '/users/login'  do |f| %>
-  <p>
-    <%= f.label :username  %> </br>
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :password, "Password" %></br>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.submit "Log in!"%>
-  </p>
-<% end %>
+<div class="form-section">
+  <div class="form-wrapper">
+    <h2>Login Form</h2>
+    <%= render 'errors' %>
+    <%= form_for @user, url: '/users/login'  do |f| %>
+    <p>
+      <%= f.label :username  %> </br>
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password, "Password" %></br>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.submit "Log in!"%>
+    </p>
+    <% end %>
+  </div>
+</div>
