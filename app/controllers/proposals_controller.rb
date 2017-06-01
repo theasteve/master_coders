@@ -16,10 +16,11 @@ class ProposalsController < ApplicationController
     end
 
     def edit
+      @proposal = Proposal.find(params[:id])
     end
 
     def update
-
+      
     end
 
     private
