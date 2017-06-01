@@ -26,7 +26,7 @@
     <li>
       <%= link_to "Experiment", proposal_experiment_path(@proposal, @proposal.experiment) %>
     </li>
-  <% elsif !@proposal.status == "open" && current_user.role == "staff"  %>
+  <% elsif @proposal.status == "open" && current_user.role == "Staff"  %>
     <li>
       <%= link_to "Create experiment", new_proposal_experiment_path(@proposal) %>
     </li>

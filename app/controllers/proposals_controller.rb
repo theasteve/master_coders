@@ -13,7 +13,8 @@ class ProposalsController < ApplicationController
 
     def create
       @proposal = Proposal.new(proposal_params)
-
+      @proposal.requestor = current_user
+      @proposal.status = "open"
       if @proposal.save
         redirect_to @proposal
       else
