@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20170601152228) do
   end
 
   create_table "procedures", force: :cascade do |t|
-    t.string   "title"
-    t.text     "steps"
-    t.integer  "experiment_id"
+    t.string   "title",         null: false
+    t.text     "steps",         null: false
+    t.integer  "experiment_id", null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["experiment_id"], name: "index_procedures_on_experiment_id", using: :btree
