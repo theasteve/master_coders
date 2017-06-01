@@ -10,8 +10,8 @@
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :type %> </br>
-    <%= select_tag(:type, options_for_select([['Faculty', 1], ['Staff', 2]])) %>
+    <%= f.label :role %> </br>
+    <%= select_tag(:role, options_for_select([['Faculty'], ['Staff']])) %>
   </p>
   <p>
     <%= f.submit "Register!"%>

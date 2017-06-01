@@ -14,20 +14,21 @@
     Status: <%= @proposal.status %>
   </li>
 
-  <!-- create helper method? for below -->
+
   <% if !@proposal.status == "open" %>
   <li>
     Experimentor: <%= @experimentor.username %>
   </li>
+
   <% end %>
 
   <% if @proposal.experiment %>
-  <li>
-    <%= link_to "Experiment", proposal_experiment_path(@proposal, @proposal.experiment) %>
-  </li>
-  <% else %>
-  <li>
-    <%= link_to "Create Experiment", new_proposal_experiment_path(@proposal) %>
+    <li>
+      <%= link_to "Experiment", proposal_experiment_path(@proposal, @proposal.experiment) %>
+    </li>
+  <% elsif !@proposal.status == "open" && current_user.role == "staff"  %>
+    <li>
+      <%= link_to "Create experiment", new_proposal_experiment_path(@proposal) %>
     </li>
   <% end %>
 

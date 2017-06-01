@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
   get '/users/login' => "users#login"
-  post '/users' => "users#login"
+  post '/users/login' => "users#loggingin"
   get '/users/logout' => "users#logout"
 
 end
