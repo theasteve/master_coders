@@ -1,8 +1,9 @@
 class ProceduresController < ApplicationController
+  before_action :set_experiment, only: [:show, :create]
+  before_action :set_procedure, only: [:show]
+  before_action :set_proposal, only: [:show]
+
   def show
-    @proposal = Proposal.find(params[:proposal_id])
-    @experiment = Experiment.find(params[:experiment_id])
-    @procedure = Procedure.find(params[:id])
   end
 
   def new
@@ -10,7 +11,6 @@ class ProceduresController < ApplicationController
   end
 
   def create
-    @experiment = Experiment.find(params[:experiment_id])
     @procedure = Procedure.new(procedure_params)
     @procedure.experiment = @experiment
 
@@ -21,16 +21,20 @@ class ProceduresController < ApplicationController
     end
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
   private
     def procedure_params
       params.require(:procedure).permit(:title, :steps, :experiment)
+    end
+
+    def set_proposal
+      @proposal = Proposal.find(params[:proposal_id])
+    end
+
+    def set_experiment
+      @experiment = Experiment.find(params[:experiment_id])
+    end
+
+    def set_procedure
+      @procedure = Procedure.find(params[:id])
     end
 end
