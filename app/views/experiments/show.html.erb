@@ -5,14 +5,14 @@
   <%= @experiment.description %>
 </p>
 
-<% if @experiment.results %>
+<% if @experiment.results != "" %>
 <h2>Results</h2>
 <p>
   <%= @experiment.results %>
 </p>
 <%end%>
 
-<% if @experiment.conclusion %>
+<% if @experiment.conclusion != "" %>
   <h2>Conclusion</h2>
   <p>
     <%= @experiment.conclusion %>
