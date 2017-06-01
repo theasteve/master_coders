@@ -20,7 +20,7 @@
     Experimentor: <%= @experimentor.username %>
   </li>
   <li>
-    <% = link_to @proposal.experiment.name,  %>
+    <% = link_to @proposal.experiment.name  %>
   </li>
   <% elsif !@proposal.status == "open" && current_user.role == "staff"  %>
   <li>
