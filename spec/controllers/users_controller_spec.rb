@@ -67,16 +67,14 @@ RSpec.describe UsersController, type: :controller do
   describe "POST#loggingin" do
     context "when valid params are passed" do
       it 'should be successful to log in' do
-        response.should be_success
+        expect(response).to have_http_status(200)
       end
-
-      it 'should start a session when logged in'
     end
 
     context "when invalid params are passed" do
       it 'should not be successful to log in' do
-      	post :create, params: { user: { username: "" } }
-        response.should_not be_success
+      	post :loggingin, params: { user: { username: "" } }
+        expect(response).to redirect_to('/users/login')
       end
     end
   end
