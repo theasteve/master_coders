@@ -1,5 +1,7 @@
 # Master Coders
 
+![GitHub Logo](/images/schema_dbc.png)
+
 ## Team Members
 * Steven Aguilar @theasteve
 * Natalie Ruiz @nataliecita
