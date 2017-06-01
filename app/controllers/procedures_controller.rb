@@ -10,9 +10,9 @@ class ProceduresController < ApplicationController
   end
 
   def create
-
+    @procedure = Procedure.new(procedure_params)
     # redirect_to to experiment homepage
-    
+
   end
 
   def edit
@@ -22,4 +22,9 @@ class ProceduresController < ApplicationController
   def update
 
   end
+
+  private
+    def procedure_params
+      params.require(:procedure).permit(:title, :steps, :experiment)
+    end
 end
