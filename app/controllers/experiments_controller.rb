@@ -25,7 +25,8 @@ class ExperimentsController < ApplicationController
         @proposal.save
         redirect_to @proposal
       else
-        render 'new'
+        @errors = @experiment.errors.full_messages
+        render :new
       end
     else
       redirect_to proposal_path(@proposal)
@@ -37,6 +38,9 @@ class ExperimentsController < ApplicationController
       if @experiment.update(experiment_params)
         @proposal.update_attributes(status: "closed") if @experiment.results != "" || @experiment.conclusion != ""
         redirect_to proposal_experiment_path(@experiment.proposal, @experiment)
+      else
+        @errors = @experiment.errors.full_messages
+        render :edit
       end
     else
       redirect_to proposal_experiment_path(@experiment.proposal, @experiment)

@@ -20,7 +20,8 @@ class ProposalsController < ApplicationController
         if @proposal.save
           redirect_to @proposal
         else
-          render 'new'
+          @errors = @proposal.errors.full_messages
+          render :new
         end
       else
         redirect_to proposals_path

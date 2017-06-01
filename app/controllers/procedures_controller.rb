@@ -17,7 +17,8 @@ class ProceduresController < ApplicationController
     if @procedure.save
       redirect_to proposal_experiment_path(@experiment.proposal, @experiment)
     else
-      render 'new'
+      @errors = @procedure.errors.full_messages
+      render :new
     end
   end
 
