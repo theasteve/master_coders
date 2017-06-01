@@ -9,16 +9,21 @@ class ProposalsController < ApplicationController
 
     def new
       @proposal = Proposal.new
+      redirect_to proposals_path unless logged_in?
     end
 
     def create
       @proposal = Proposal.new(proposal_params)
-      @proposal.requestor = current_user
-      @proposal.status = "open"
-      if @proposal.save
-        redirect_to @proposal
+      if logged_in?
+        @proposal.requestor = current_user
+        @proposal.status = "open"
+        if @proposal.save
+          redirect_to @proposal
+        else
+          render 'new'
+        end
       else
-        render 'new'
+        redirect_to proposals_path
       end
     end
 

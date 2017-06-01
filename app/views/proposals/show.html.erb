@@ -15,9 +15,9 @@
   </li>
 
 
-  <% if !@proposal.status == "open" %>
+  <% if @proposal.status != "open" && @proposal.experimentor %>
   <li>
-    Experimentor: <%= @experimentor.username %>
+    Experimentor: <%= @proposal.experimentor.username %>
   </li>
 
   <% end %>
