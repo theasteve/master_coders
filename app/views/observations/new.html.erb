@@ -1,9 +1,12 @@
-<h1>Create an Observation</h1>
+<div class="form-section">
+  <div class="form-wrapper">
+
+<h2>Create an Observation</h2>
 
 <%= form_for @form_params do |f| %>
 <p>
   <%= f.label :body %>
-  <%= f.text_field :body %>
+  <%= f.text_field :body, class: 'form-textfield' %>
 </p>
 
 <p>
@@ -15,7 +18,9 @@
 </p>
 
 <p>
-  <%= f.submit %>
+  <%= f.submit class: 'submit-button' %>
 </p>
 
 <% end %>
+</div>
+</div>

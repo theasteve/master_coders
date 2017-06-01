@@ -3,11 +3,12 @@
 </div>
 
 <div class="">
-    <%= @procedure.steps %>
+    <p><%= @procedure.steps %></p>
 </div>
 
-<%= link_to 'Create Observation', new_proposal_experiment_procedure_observation_path(@procedure.experiment.proposal, @procedure.experiment, @procedure) %>
-
+<div class="proposal-link">
+  <%= link_to 'Create Observation', new_proposal_experiment_procedure_observation_path(@procedure.experiment.proposal, @procedure.experiment, @procedure) %>
+</div>
 <% if @procedure.observations.any? %>
   <p>Observations </p>
   <ul>
