@@ -5,14 +5,14 @@
     <%= form_for @user, url: '/users/login'  do |f| %>
     <p>
       <%= f.label :username  %> </br>
-      <%= f.text_field :username %>
+      <%= f.text_field :username, class: 'form-textfield' %>
     </p>
     <p>
       <%= f.label :password, "Password" %></br>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-textfield' %>
     </p>
     <p>
-      <%= f.submit "Log in!"%>
+      <%= f.submit "Log in!", class: 'submit-button'%>
     </p>
     <% end %>
   </div>

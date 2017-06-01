@@ -5,18 +5,18 @@
     <%= form_for @user do |f| %>
     <p>
       <%= f.label :username  %> </br>
-      <%= f.text_field :username %>
+      <%= f.text_field :username, class: 'form-textfield' %>
     </p>
     <p>
       <%= f.label :password, "Password" %></br>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-textfield' %>
     </p>
     <p>
       <%= f.label :role %> </br>
       <%= select_tag(:role, options_for_select([['Faculty'], ['Staff']])) %>
     </p>
     <p>
-      <%= f.submit "Register!"%>
+      <%= f.submit "Register!", class: 'submit-button'%>
     </p>
     <% end %>
   </div>

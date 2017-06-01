@@ -7,6 +7,7 @@ p, a, label, input, ol, ul, li {
 }
 
 a {
+	color: rgb(123,195,242);
 	text-decoration: none;
 }
 
@@ -62,18 +63,34 @@ form {
 	width: 100%;
 }
 
+.form-textfield {
+	display: block;
+	width: 200px;
+}
+
+.form-wrapper select {
+	width: 200px;
+}
+
 .submit-button {
-	background-color: #D78521;
-	border-radius: 10px;
-	border: 2px #fff solid;
-	color: #fff;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 2px rgb(123,195,242) solid;
+	color: rgb(123,195,242);
 	display: table;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 25px;
+	font-size: 15px;
 	margin: 0 auto;
 	padding: 15px;
 	transition: background-color 0.5s ease;
-	width: 100%;
+	width: 200px
+}
+
+.submit-button:hover {
+	background-color: rgb(123,195,242);
+	border: 2px #fff solid;
+	color: #fff;
+	transition: background-color 0.5s ease;
 }
 
 .errors {
@@ -83,3 +100,4 @@ form {
 .proposal-link {
 	margin-top: 50px;
 }
+

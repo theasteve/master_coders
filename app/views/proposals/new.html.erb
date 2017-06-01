@@ -1,23 +1,28 @@
-<%= form_for([@proposal]) do |f|%>
-  <% if @proposal.errors.any? %>
-  <h4>
-    <%= pluralize(@proposal.errors.count, "error") %>
-    prohibited this proposal from being saved:
-  </h4>
-  <ul>
-    <% @proposal.errors.full_messages.each do |msg| %>
-    <li> <%= msg %></li>
-    <% end %>
-  </ul>
-<%end %>  
+<div class="form-section">
+  <div class="form-wrapper">
+    <h2>Create A New Proposal</h2>
+    <%= form_for([@proposal]) do |f|%>
+      <% if @proposal.errors.any? %>
+      <h4>
+        <%= pluralize(@proposal.errors.count, "error") %>
+        prohibited this proposal from being saved:
+      </h4>
+      <ul>
+        <% @proposal.errors.full_messages.each do |msg| %>
+        <li> <%= msg %></li>
+        <% end %>
+      </ul>
+    <%end %>  
 
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %> <br>
-    <%= f.label :summary %>
-    <%= f.text_area :summary %> <br>
-    <%= f.label :hypothesis %>
-    <%= f.text_area :hypothesis%> <br>
-  </p>
-  <%= f.submit "Create New Proposal" %> 
-<% end %>
+      <p>
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-textfield' %> <br>
+        <%= f.label :summary %>
+        <%= f.text_area :summary, class: 'form-textfield' %> <br>
+        <%= f.label :hypothesis %>
+        <%= f.text_area :hypothesis, class: 'form-textfield'%> <br>
+      </p>
+      <%= f.submit "Create New Proposal", class: 'submit-button' %> 
+    <% end %>
+  </div>
+</div>
