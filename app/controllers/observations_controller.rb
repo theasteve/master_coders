@@ -1,4 +1,6 @@
 class ObservationsController < ApplicationController
+  before_action :set_experiment, only: [:new, :create, :show]
+  
   def new
     @experiment = Experiment.find(params[:experiment_id])
     @observation = Observation.new
@@ -8,15 +10,13 @@ class ObservationsController < ApplicationController
   def create
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
 
   def show
+  end
+
+  private
+
+  def set_experiment
+    @experiment = Experiment.find(params[:experiment_id])
   end
 end
