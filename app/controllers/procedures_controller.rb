@@ -10,9 +10,15 @@ class ProceduresController < ApplicationController
   end
 
   def create
+    @experiment = Experiment.find(params[:experiment_id])
     @procedure = Procedure.new(procedure_params)
-    # redirect_to to experiment homepage
+    @procedure.experiment = @experiment
 
+    if @procedure.save
+      redirect_to proposal_experiment_path(@experiment.proposal, @experiment)
+    else
+      render 'new'
+    end
   end
 
   def edit
