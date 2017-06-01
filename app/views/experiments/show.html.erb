@@ -19,4 +19,6 @@
   </p>
 <%end%>
 
-<%=link_to "Edit", edit_experiment_path(@experiment)%>
+<%=link_to "Edit", edit_proposal_experiment_path(@experiment.proposal, @experiment)%>
+
+<%=link_to "Back", proposal_path(@experiment.proposal)%>
