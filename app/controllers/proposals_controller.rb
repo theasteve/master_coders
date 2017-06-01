@@ -26,7 +26,13 @@ class ProposalsController < ApplicationController
     end
 
     def update
+      @proposal = Proposal.find(params[:id])
 
+      if @proposal.update(proposal_params)
+        redirect_to @proposal
+      else
+        render 'edit'
+      end
     end
 
     private
