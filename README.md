@@ -3,8 +3,10 @@
 ## Team Members
 * Steven Aguilar @theasteve
 * Natalie Ruiz @nataliecita
-* Richard Kim @richardykim
+* Richard Kim @richardykim [DECEASED]
 * Louis Gaeta @louisgaeta1
+* Alexandra Hill @alexnhill
+* Lana Chiad @lanachiad
 
 ## MVP User Stories
 * User logs in and out of app

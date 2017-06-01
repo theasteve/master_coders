@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :experiments, except: [:delete, :index] do
       resources :procedures, only: [:show, :new, :create]
     end
+    resources :experiments, except: [:delete, :index]
   end
 
   resources :users, only: [:new, :create]
