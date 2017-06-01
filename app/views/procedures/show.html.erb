@@ -3,9 +3,7 @@
 </div>
 
 <div class="">
-  <li>
     <%= @procedure.steps %>
-  </li>
 </div>
 
 <%= link_to 'Create Observation', new_proposal_experiment_procedure_observation_path(@procedure.experiment.proposal, @procedure.experiment, @procedure) %>

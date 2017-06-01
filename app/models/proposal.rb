@@ -4,6 +4,8 @@ class Proposal < ApplicationRecord
   has_many :users
   has_one :experiment
 
+  validates :summary, :hypothesis, :title, presence: true
+
   def experimentor
     User.find_by_id(experimentor_id)
   end
