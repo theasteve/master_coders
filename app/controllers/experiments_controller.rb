@@ -15,6 +15,7 @@ class ExperimentsController < ApplicationController
 
   def create
     @experiment = Experiment.new(experiment_params)
+    @proposal.assign_attributes(experimentor_id: current_user.id)
     @experiment.proposal = @proposal
     if @experiment.save
       @proposal.status = "in progress"
