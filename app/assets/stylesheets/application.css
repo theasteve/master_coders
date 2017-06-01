@@ -79,3 +79,7 @@ form {
 .errors {
 	color: red;
 }
+
+.proposal-link {
+	margin-top: 50px;
+}
