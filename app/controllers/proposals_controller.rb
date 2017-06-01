@@ -12,7 +12,13 @@ class ProposalsController < ApplicationController
     end
 
     def create
+      @proposal = Proposal.new(proposal_params)
 
+      if @proposal.save
+        redirect_to @proposal
+      else
+        render 'new'
+      end
     end
 
     def edit
@@ -20,7 +26,7 @@ class ProposalsController < ApplicationController
     end
 
     def update
-      
+
     end
 
     private
