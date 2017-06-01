@@ -68,7 +68,7 @@ form {
 	border: 2px #fff solid;
 	color: #fff;
 	display: table;
-	font-family: 'Teko', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 25px;
 	margin: 0 auto;
 	padding: 15px;
@@ -76,12 +76,6 @@ form {
 	width: 100%;
 }
 
-.submit-button:hover {
-	background-color: #fff;
-	border: 2px #D78521 solid;
-	color: #D78521;
-	transition: background-color 0.5s ease;
-}
-
-.submit-button, .submit-button:hover {
+.errors {
+	color: red;
 }
