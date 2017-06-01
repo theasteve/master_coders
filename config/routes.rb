@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root "proposals#index"
 
   resources :proposals, except: :delete do
+    resources :experiments, except: [:delete, :index] do
+      resources :procedures, only: [:show, :new, :create]
+    end
     resources :experiments, except: [:delete, :index]
   end
 

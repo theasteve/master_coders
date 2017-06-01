@@ -24,3 +24,16 @@
 <% end %>
 
 <%=link_to "Back", proposal_path(@experiment.proposal)%>
+
+
+<% if @experiment.procedures %>
+  <div class="">
+      <ul>
+      <% @experiment.procedures.each do |procedure| %>
+      <li> <%= link_to procedure.title, proposal_experiment_procedure_path(@proposal, @experiment, procedure) %></li>
+    <%end %>
+      </ul>
+  </div>
+<% end %>
+
+<%= link_to "Add Procedure", new_proposal_experiment_procedure_path(@experiment.proposal, @experiment)  %>
