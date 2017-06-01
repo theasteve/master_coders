@@ -1,5 +1,7 @@
 <h1>Login Form</h1>
 
+<%= render 'errors' %>
+
 <%= form_for @user, url: '/users/login'  do |f| %>
   <p>
     <%= f.label :username  %> </br>
