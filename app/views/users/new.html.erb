@@ -1,21 +1,23 @@
-<h1>Registration Form</h1>
-
-<%= render 'errors' %>
-
-<%= form_for @user do |f| %>
-  <p>
-    <%= f.label :username  %> </br>
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :password, "Password" %></br>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :role %> </br>
-    <%= select_tag(:role, options_for_select([['Faculty'], ['Staff']])) %>
-  </p>
-  <p>
-    <%= f.submit "Register!"%>
-  </p>
-<% end %>
+<div class="form-section">
+  <div class="form-wrapper">
+    <h2>Registration Form</h2>
+    <%= render 'errors' %>
+    <%= form_for @user do |f| %>
+    <p>
+      <%= f.label :username  %> </br>
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password, "Password" %></br>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :role %> </br>
+      <%= select_tag(:role, options_for_select([['Faculty'], ['Staff']])) %>
+    </p>
+    <p>
+      <%= f.submit "Register!"%>
+    </p>
+    <% end %>
+  </div>
+</div>
