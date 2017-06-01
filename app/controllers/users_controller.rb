@@ -25,8 +25,9 @@ class UsersController < ApplicationController
       session[:user_id]= @user.id
       redirect_to '/'
     else
-      @errors = @user.errors.full_messages
-      redirect_to '/users/login'
+      @errors = ["Username/Password invalid."]
+      @user = User.new
+      render :login
     end
   end
 
