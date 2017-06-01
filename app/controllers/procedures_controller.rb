@@ -6,11 +6,13 @@ class ProceduresController < ApplicationController
   end
 
   def new
-
+    @procedure = Procedure.new
   end
 
   def create
 
+    # redirect_to to experiment homepage
+    
   end
 
   def edit
