@@ -1,0 +1,21 @@
+<h1>Create an Observation</h1>
+
+<%= form_for [@experiment, @observation] do |f| %>
+<p>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+</p>
+
+<p>
+<%= f.hidden_field :observable_id, :value => @experiment.id %>
+</p>
+
+<p>
+<%= f.hidden_field :observable_type, :value => "Experiment" %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
