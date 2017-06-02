@@ -1,6 +1,8 @@
 # Master Coders
 
 ![GitHub Logo](/images/schema_dbc.png)
+![Trello board](/images/trello.png)
+![information](/images/data.jpg)
 
 ## Team Members
 * Steven Aguilar @theasteve
