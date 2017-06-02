@@ -1,0 +1,13 @@
+<h1> Proposals</h1>
+
+<ul>
+<% @proposals.each do |proposal| %>
+  <li> <%= link_to  proposal.title, proposal %></li>
+<% end %>
+</ul>
+
+<% if logged_in? && current_user.role == "Faculty" %>
+	<div class="proposal-link">
+		<%= link_to 'Create new proposal', new_proposal_path %>
+	</div>
+<% end %>

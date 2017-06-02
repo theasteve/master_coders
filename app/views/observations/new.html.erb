@@ -1,0 +1,26 @@
+<div class="form-section">
+  <div class="form-wrapper">
+
+<h2>Create an Observation</h2>
+
+<%= form_for @form_params do |f| %>
+<p>
+  <%= f.label :body %>
+  <%= f.text_field :body, class: 'form-textfield' %>
+</p>
+
+<p>
+<%= f.hidden_field :observable_id, :value => @experiment.id %>
+</p>
+
+<p>
+<%= f.hidden_field :observable_type, :value => "Experiment" %>
+</p>
+
+<p>
+  <%= f.submit class: 'submit-button' %>
+</p>
+
+<% end %>
+</div>
+</div>

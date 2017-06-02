@@ -1,0 +1,51 @@
+<h1> <%= @experiment.name %> </h1>
+
+<h2>Description</h2>
+<p>
+  <%= @experiment.description %>
+</p>
+
+<% if @experiment.results != "" %>
+<h2>Results</h2>
+<p>
+  <%= @experiment.results %>
+</p>
+<%end%>
+
+<% if @experiment.conclusion != "" %>
+  <h2>Conclusion</h2>
+  <p>
+    <%= @experiment.conclusion %>
+  </p>
+<%end%>
+
+<% if experimentor?(@proposal) %>
+<%=link_to "Edit", edit_proposal_experiment_path(@experiment.proposal, @experiment)%>
+<% end %>
+
+<%=link_to "Back", proposal_path(@experiment.proposal)%>
+
+
+<% if @experiment.procedures %>
+  <div class="">
+      <ul>
+      <% @experiment.procedures.each do |procedure| %>
+      <li> <%= link_to procedure.title, proposal_experiment_procedure_path(@proposal, @experiment, procedure) %></li>
+    <%end %>
+      </ul>
+  </div>
+<% end %>
+
+<%= link_to "Add Procedure", new_proposal_experiment_procedure_path(@experiment.proposal, @experiment)  %>
+
+<%= link_to 'Create Observation', new_proposal_experiment_observation_path(@experiment.proposal, @experiment) %>
+
+<% if @experiment.observations.any? %>
+  <p>Observations </p>
+  <ul>
+  <% @experiment.observations.each do |observation| %>
+
+    <li><%= observation.body %></li>
+    <% end %>
+</ul>
+<% end %>

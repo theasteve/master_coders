@@ -1,0 +1,20 @@
+<div class="">
+  <h1> <%= @procedure.title %></h1>
+</div>
+
+<div class="">
+    <p><%= @procedure.steps %></p>
+</div>
+
+<div class="proposal-link">
+  <%= link_to 'Create Observation', new_proposal_experiment_procedure_observation_path(@procedure.experiment.proposal, @procedure.experiment, @procedure) %>
+</div>
+<% if @procedure.observations.any? %>
+  <p>Observations </p>
+  <ul>
+  <% @procedure.observations.each do |observation| %>
+
+    <li><%= observation.body %></li>
+    <% end %>
+</ul>
+<% end %>
